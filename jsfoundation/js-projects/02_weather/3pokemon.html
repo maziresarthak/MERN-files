@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon App</title>
+    <link rel="stylesheet" href="3pokemon.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pokemon App</h1>
+      <div class="input-container">
+        <input
+          type="text"
+          id="pokemon-input"
+          placeholder="Enter pokemon name"
+        />
+        <button id="get-pokemonsprite-btn">Get Pokemon</button>
+      </div>
+      <div id="pokemon-info" class="hidden">
+        <img src="abc" alt="Pokemon Sprite" id="pokemon-sprite" />
+        <h2 id="pokemon-name"></h2>
+        <p id="pokemon-type" style="margin-top: 5px"></p>
+      </div>
+      <p id="error-message" class="hidden">
+        Pokemon not found. Please try again.
+      </p>
+    </div>
+    <script src="3pokemon.js"></script>
+  </body>
+</html>
