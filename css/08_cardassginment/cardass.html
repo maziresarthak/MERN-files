@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Card assignment</title>
+    <link rel="stylesheet" href="cardass.css" />
+  </head>
+
+  <body class="h-screen flex items-center justify-center bg-white-primary">
+    <div class="product-slider rounded-2xl">
+      <div class="h-full flex flex-col items-center justify-center">
+        <div class="product-title mb-7">
+          <h2 class="headline font-normal text-lg text-center leading-15">
+            <a href="#" class="text-white">Iphone 17 Pro</a>
+          </h2>
+          <div class="offer">
+            <h3 class="headline font-bold text-20 leading-12 text-white">
+              Best offer
+            </h3>
+          </div>
+        </div>
+
+        <div class="product-image mb-5">
+          <img
+            src="//s34.picofile.com/file/8487604918/iPhone_17_Pro.png"
+            class="w-full h-full object-contain"
+            alt=""
+          />
+        </div>
+
+        <div class="product-timer text-center">
+          <span class="title font-normal text-mx text-white">Time left:</span>
+          <div class="timer mt-2">
+            <div class="grid grid-cols-3 gap-4">
+              <div class="hours h-6 rounded-md bg-gray-primary">
+                <span
+                  class="h-6 flex items-center justify-center font-bold text-xs text-[#505780]"
+                  id="daybox"
+                ></span>
+              </div>
+
+              <div class="minutes h-6 rounded-md bg-gray-primary">
+                <span
+                  class="h-6 flex items-center justify-center font-bold text-xs text-[#505780]"
+                  id="hoursbox"
+                ></span>
+              </div>
+
+              <div class="seconds h-6 rounded-md bg-gray-primary">
+                <span
+                  class="h-6 flex items-center justify-center font-bold text-xs text-[#505780]"
+                  id="minbox"
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="btn pt-4 pb-4 p-7 font-semibold text-sm leading-4 rounded-lg cursor-pointer text-white bg-blue-primary"
+        >
+          Only $999.00
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

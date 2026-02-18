@@ -1,0 +1,127 @@
+<!-- only caurosel problem, else everything is done, will do this when I will complete whole course or atleast I have good css -->
+<!-- for better explanation of cards go to : https://chatgpt.com/share/68fb22dd-e4e8-8004-8a95-57c13c575eba -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Small Carousel</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #1a1a1a;
+        /* background: linear-gradient(135deg, #8a2be2, #4169e1); */
+      }
+      .parent-card-container {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 45px;
+        flex-wrap: wrap;
+      }
+      .card {
+        transition: transform 0.3s ease;
+      }
+      .card-img-top {
+        height: 250px;
+        object-fit: cover;
+      }
+      .card:hover {
+        transform: translateY(-8px);
+      }
+      .copyright-container {
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent-card-container">
+      <div class="card text-bg-dark border-primary" style="width: 18rem">
+        <img
+          src="https://images.pexels.com/photos/27799203/pexels-photo-27799203.jpeg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body text-primary">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the cards content.
+          </p>
+          <a
+            href="https://www.youtube.com/watch?v=sscX432bMZo"
+            target="_blank"
+            class="btn btn-outline-primary"
+            >Go somewhere</a
+          >
+        </div>
+      </div>
+      <div
+        class="card text-center text-bg-dark border-success"
+        style="width: 18rem"
+      >
+        <img
+          src="https://images.pexels.com/photos/792381/pexels-photo-792381.jpeg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body text-success">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the cards content.
+          </p>
+          <a
+            href="https://www.youtube.com/watch?v=_TjtAyMkiTI"
+            target="_blank"
+            class="btn btn-outline-success"
+            >Go somewhere</a
+          >
+        </div>
+      </div>
+      <div
+        class="card text-end text-bg-dark border-danger"
+        style="width: 18rem"
+      >
+        <img
+          src="https://images.pexels.com/photos/36846/bald-eagle-adler-bird-of-prey-raptor.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body text-danger">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the cards content.
+          </p>
+          <a
+            href="https://www.youtube.com/watch?v=NkwFxeHARqc"
+            target="_blank"
+            class="btn btn-outline-danger"
+            >Go somewhere</a
+          >
+        </div>
+      </div>
+    </div>
+    <p class="copyright-container">&copy; Sarthak Mazire</p>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

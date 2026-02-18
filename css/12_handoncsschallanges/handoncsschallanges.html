@@ -1,0 +1,200 @@
+<!-- for the topic of postion like absolute,relative and statich just watch this vid: https://www.youtube.com/watch?v=YEmdHbQBCSQ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Handon css challanges</title>
+    <style>
+      body {
+        height: 100vh;
+      }
+      .box {
+        background-color: rgb(44, 44, 174);
+        padding: 20px;
+        margin: 30px;
+      }
+      .circle {
+        border-radius: 50%;
+        background-color: rgb(176, 37, 37);
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+        /* display pasun margin he additional elements takle, kharatar fakt circle banvaycha hota pan me ek digit sudha banavla to mark it into the circle */
+      }
+      .static-box {
+        /* static mhanje default web page chi postion, no top,bottom,left,right properties will influence it */
+        position: static;
+        background-color: #69c457;
+      }
+      .relative-box {
+        /* relative mhanje kay tyachya static chya relative, ektda static kar ani magh relative kar kalun jail, nahi kalla ki video bagh */
+        position: relative;
+        background-color: #91c2df;
+        right: 50px;
+        bottom: 50px;
+      }
+      .parent-container {
+        position: relative;
+      }
+      .absolute-box {
+        /* postion absolute mhanje relative to the parent/nearest ancestor element, to position it relative to parent container I have to give parent container position relative thats what i have done */
+        position: absolute;
+        background-color: #dd64eb;
+        top: 30px;
+        left: 30px;
+      }
+      .parent-flex-container {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        height: auto;
+        height: 100vh;
+      }
+      .flex-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        height: auto;
+        width: 100%;
+        max-width: 1200px;
+        padding: 20px;
+        color: #fff;
+        font-size: 26px;
+        background-color: #8613ea;
+      }
+      /* so ata ithe kay jhala jevha me .flex-container var flex properties vaparlya  and media queries madhe pan fakt hyahcyavar saglya flex properites vaparylya tevha kahic work hot nhavta, karan align-items on .flex-container controls how its children are aligned inside that flex container. It does not move the .flex-container itself within its parent. In your second (working) example you put display:flex on body, so changing align-items or justify-content there moves the child element (your .responsive-div). In the first file your .flex-container is the flex container, so changing its align-items only repositions the contents inside the purple/red box — not the purple/red box on the page, so ektar body var vaprava lagla asta pan ofc mala aki konalach halvaych nhavta so me ek parent div banavla simple with classs parent-flex-container and tyachyavar display fles kela and yep everything worked */
+      @media (max-width: 600px) {
+        .parent-flex-container {
+          align-items: flex-end;
+        }
+        .flex-container {
+          background-color: #3498db;
+        }
+      }
+      @media (min-width: 601px) and (max-width: 1024px) {
+        .parent-flex-container {
+          align-items: center;
+        }
+        .flex-container {
+          background-color: #e74c3c;
+        }
+      }
+      .container {
+        background-color: #fff;
+        border: 2px solid #333;
+        margin-bottom: 20px;
+        padding: 10px;
+      }
+      .grid-container {
+        display: grid;
+        gap: 10px;
+        background-color: #ddd;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      .grid-item {
+        background-color: #3498db;
+        color: white;
+        padding: 20px;
+        font-size: 18px;
+        text-align: center;
+      }
+      .grid-item:nth-child(odd) {
+        background-color: #e74c3c;
+      }
+    </style>
+  </head>
+  <body>
+    <p style="color: blue">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis optio
+      tenetur corporis ducimus neque officia perspiciatis earum reiciendis dolor
+      ad?
+    </p>
+    <button
+      style="
+        background-color: aqua;
+        color: #cbb7b7;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+      "
+    >
+      Hello!
+    </button>
+    <div
+      style="
+        border: 3px dashed black;
+        border-style: dashed;
+        border-radius: 10px;
+        width: 100%;
+      "
+    >
+      Lorem ipsum dolor sit amet.
+    </div>
+    <p
+      style="color: red; font-weight: bold; font-size: 18px; font-style: italic"
+    >
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed tempora
+      placeat quas doloribus eius asperiores quos? Cupiditate cum id porro
+      distinctio quisquam a quia temporibus inventore sequi quod aliquid non
+      architecto, molestias aut unde exercitationem? Iure, id sunt quia itaque
+      corrupti a ullam voluptatibus reprehenderit cupiditate recusandae
+      obcaecati velit sed.
+    </p>
+    <div class="box">Lorem ipsum dolor sit amet.</div>
+    <div class="circle">1</div>
+    <div class="parent-container">
+      <div class="static-box">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium
+        nesciunt omnis necessitatibus libero fugiat itaque ab praesentium quod
+        aliquam obcaecati at consequatur minima, facilis cumque nihil, ipsum
+        iste temporibus est.
+      </div>
+      <div class="relative-box">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium
+        nesciunt omnis necessitatibus libero fugiat itaque ab praesentium quod
+        aliquam obcaecati at consequatur minima, facilis cumque nihil, ipsum
+        iste temporibus est.
+      </div>
+      <div class="absolute-box">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium
+        nesciunt omnis necessitatibus libero fugiat itaque ab praesentium quod
+        aliquam obcaecati at consequatur minima, facilis cumque nihil, ipsum
+        iste temporibus est.
+      </div>
+    </div>
+    <div class="parent-flex-container">
+      <div class="flex-container">
+        this div changes based on the screen size
+      </div>
+    </div>
+    <div class="container">
+      <h2 style="color: #333">Basic Grid (3x3)</h2>
+      <div
+        class="grid-container"
+        style="
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(3, 100px);
+        "
+      >
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+      </div>
+    </div>
+  </body>
+</html>

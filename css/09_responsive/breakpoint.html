@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive design</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* why is it no assigning in center coz we have to give height that is 100%vh */
+        height: 100vh;
+        background-color: #1a1a1a;
+      }
+      .responsive-div {
+        width: 100%;
+        max-width: 1200px;
+        padding: 20px;
+        color: #fff;
+        font-size: 26px;
+        background-color: #8613ea;
+      }
+      @media (max-width: 600px) {
+        /* everything here will work till 600px after that thats responsive breakpoint check by enralging the web page and also thoru inspect */
+        /* this is usually mobile responsive */
+        body {
+          align-items: flex-start;
+        }
+        .responsive-div {
+          background-color: #3498db;
+        }
+      }
+      @media (min-width: 601px) and (max-width: 1024px) {
+        /* ata ithe sudha min 601px tari pahije magach red rahil tyachya khali gela ki its responsive breakdown ani magh blue hoil. ex ghetla ki mobile so mobile chi screen asel tar 600 cchya khalich asnar? so it will follow max mhanje blue honar, pan mothi screens asle ki 600px cross karnar ani magh responsive breakdown yenar for max-width ani magh red honar vice a versa for min width, kahi kalla nahi ki just video refer kar */
+        /* ata and laun max width pan dhili ki so like 1024 la tekla ki media querry does not what to do so it gives control back to the body thus becoming violet */
+        /* this is usually biger screens respopnsive */
+        body {
+          align-items: center;
+        }
+        .responsive-div {
+          background-color: #e74c3c;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="responsive-div">this div changes based on the screen size</div>
+  </body>
+</html>

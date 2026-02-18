@@ -1,0 +1,252 @@
+<!-- for the topic of postion like absolute,relative and statich just watch this vid: https://www.youtube.com/watch?v=YEmdHbQBCSQ -->
+<!-- nav bar horizontal kasa jhala he kadhi visarla ki magh ektar hi link kiva whatsapp var ek msg template ahe tithun bagh -->
+<!-- https://chatgpt.com/share/68f77503-38ac-8004-9a85-b1c79111b073 -->
+<!-- 04_navbar - navbar.html horizontal arragement how for first underlying nav animation :: after pseudo element explanation -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nav bar my practise</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #a7e85c;
+        margin: 0;
+        padding: 15px;
+      }
+
+      h2 {
+        margin-bottom: 10px;
+      }
+
+      .nav-container {
+        margin-bottom: 40px;
+      }
+
+      .nav1 {
+        background-color: #1a1a1a;
+        padding: 12px;
+      }
+
+      .nav1 ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .nav1 li {
+        display: inline;
+      }
+
+      .nav1 .login-btn {
+        color: #fff;
+        padding: 5px 15px;
+        border-radius: 5px;
+        background-color: #eda31a;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .nav1 .login-btn::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background-color: #5ee83c;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .nav1 .login-btn:hover::after {
+        transform: scaleX(1);
+      }
+
+      .nav1 a {
+        background-color: #f12727;
+        padding: 5px 15px;
+        text-decoration: none;
+        color: #fff;
+        border-radius: 5px;
+        position: relative;
+      }
+
+      .nav1 a::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background-color: #5ee83c;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+      .nav1 a:hover::after {
+        transform: scaleX(1);
+      }
+
+      .nav2 {
+        background-color: #413af5;
+        width: 200px;
+        padding: 20px;
+      }
+
+      .nav2 ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav2 li {
+        margin-bottom: 12px;
+      }
+
+      .nav2 a {
+        text-decoration: none;
+        display: block;
+        color: #fff;
+        width: 100%;
+        padding: 10px;
+      }
+
+      .nav2 a:hover {
+        background-color: #2f29e0;
+      }
+
+      .nav2 .login-btn {
+        background-color: #dd42e3;
+        width: 100%;
+        padding: 10px;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .nav2 .login-btn:hover {
+        border: 1px solid #fff;
+        background-color: #d925e0;
+      }
+
+      .nav3 {
+        background-color: #e05252;
+        padding: 10px;
+      }
+
+      .nav3 ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .nav3 a {
+        text-decoration: none;
+        color: #fff;
+        padding: 10px;
+        display: block;
+        position: relative;
+      }
+
+      .nav3 a::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #fff;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .nav3 a:hover::after {
+        transform: scaleX(1);
+      }
+
+      .nav3 .dropdown-content {
+        display: none;
+        width: 100%;
+        padding: 10px;
+      }
+
+      .nav3 .dropdown:hover .dropdown-content {
+        margin-top: 2px;
+        display: block;
+        position: absolute;
+        background-color: #1a1a1a;
+        width: 150px;
+      }
+
+      .nav3 .dropdown:hover .dropdown-content a:hover {
+        background-color: #0a0a0a;
+      }
+      /* Pahilyanda me bgc #0a0a0a direct .nav .dropdown-content var vaprat hoto pan kahich hot nhavta karan te display:none ahe pn magh .nav3 .dropdown:hover .dorpdown-conten a:hover magh jhala mhanjech kay nav3 cha decendant class(dropdown) la hover kela tevha dropdown-content class ha dusplay:block hoto ani jevha me tya ahref link la hover karel tevhach css properties apply hotil */
+
+      .nav3 .login-btn {
+        background-color: #eda31a;
+        padding: 7px 15px;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .nav3 .login-btn:hover {
+        border: 1px solid #fff;
+        background-color: #d69720;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav-container">
+      <h2>Navigation underline effect</h2>
+      <nav class="nav1">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Products</a></li>
+          <li><button class="login-btn">Login</button></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="nav-container">
+      <h2>Variation 2 : Vertical with hover effect</h2>
+      <nav class="nav2">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Products</a></li>
+        </ul>
+        <button class="login-btn">Login</button>
+      </nav>
+    </div>
+
+    <div class="nav-container">
+      <h2>Variation 3 : Horizontal with dropdown</h2>
+      <nav class="nav3">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#">About</a>
+            <div class="dropdown-content">
+              <a href="#">Our story</a>
+              <a href="#">Team</a>
+              <a href="#">Contact</a>
+            </div>
+          </li>
+          <li><a href="#">Products</a></li>
+          <li><button class="login-btn">Login</button></li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>
