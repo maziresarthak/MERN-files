@@ -1,0 +1,5 @@
+now the only the path is 
+D:\Sarthak\Program\webdev_sm\Git\bin\
+and after bin write powershell .exe or gitbash.exe whatever you want
+
+if any doubt refer this : https://chatgpt.com/share/698a1d44-7310-8004-8edc-c9495e69e2f7
